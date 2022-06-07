@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+        stages {
+            
+            stage ('pull'){
+            steps {
+                    echo 'pull successfull'
+                    git branch: 'main', url: 'https://github.com/avinashzanzad/jenkins-prac.git'
+                  }
+            }
+            
+            stage ('build'){
+            steps {
+                    echo 'Build successfully'
+                  }
+            }
+
+            stage ('Test'){
+            ste
+                    echo 'Test successfully'
+                  }
+            }
+            
+            stage ('Deploy'){
+            steps {
+                    echo 'Desploy successfully'
+                  }
+            }
+
+
+            }
+
+        }
