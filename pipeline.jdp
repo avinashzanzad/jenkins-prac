@@ -1,32 +1,35 @@
 pipeline {
     agent any
-        stages {
-            
-            stage ('pull'){
+
+    stages {
+        stage('pull') {
             steps {
-                    echo 'pull successfull'
-                    git branch: 'main', url: 'https://github.com/avinashzanzad/jenkins-prac.git'
-                  }
+                echo 'pull successfull'
+                git branch: 'main', url: 'https://github.com/avinashzanzad/remote_repo.git'
+                
             }
-            
-            stage ('build'){
+        }
+        
+        stage('test') {
             steps {
-                    echo 'Build successfully'
-                  }
+                echo 'test successfull'
+                
             }
-
-            stage ('Test'){
-            ste
-                    echo 'Test successfully'
-                  }
-            }
-            
-            stage ('Deploy'){
+        }
+        
+                
+        stage('build') {
             steps {
-                    echo 'Desploy successfully'
-                  }
+                echo 'build successfull'
             }
-
-
+        }
+        
+        stage('deploy') {
+            steps {
+                echo 'deploy successfull'
             }
+        }
+        
 
+    }
+}
