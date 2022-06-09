@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'pull successfull'
                 git branch: 'main', url: 'https://github.com/avinashzanzad/remote_repo.git'
+                sh 'ls'
                 
             }
         }
