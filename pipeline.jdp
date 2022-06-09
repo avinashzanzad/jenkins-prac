@@ -5,7 +5,7 @@ pipeline {
         stage('pull') {
             steps {
                 echo 'pull successfull'
-                git branch: 'main', url: 'https://github.com/avinashzanzad/remote_repo.git'
+                git branch: 'main', url: 'https://github.com/avinashzanzad/jenkins-prac.git'
                 sh 'ls'
                 
             }
